@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  thesis-notebook:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # Map current folder (.) to the folder inside (/bachelorthesis)
+      - .:/bachelorthesis
+    ports:
+      - "8888:8888"
+    # Keep the container running
+    command: /bin/sh -c "while sleep 1000; do :; done"
