@@ -12,3 +12,4 @@ services:
       - "8888:8888"
     # Keep the container running
     command: /bin/sh -c "while sleep 1000; do :; done"
+    

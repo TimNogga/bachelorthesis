@@ -3,6 +3,9 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "thesis-notebook",
   "workspaceFolder": "/bachelorthesis",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+  ],
   "customizations": {
     "vscode": {
       "settings": {
@@ -15,4 +18,5 @@
     }
   },
   "shutdownAction": "stopCompose"
+  
 }
